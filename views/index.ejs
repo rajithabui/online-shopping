@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My APP</title>
+</head>
+<body>
+
+    <form action="/user" method="POST">
+        <input type="text" placeholder="username" name="name">
+        <input type="text" placeholder="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <ul>
+        <% for(let i=0; i<user.length; i++) {%>
+            <li><%console.log(user[i].name)%>
+                <span><%= user[i].name %></span>
+                <span><%= user[i].password %></span>
+            </li>
+        <% } %>
+    </ul>
+
+    <div>
+        <h2>Replace User name</h2>
+        <button id="update"> New User name</button>
+    </div>
+
+    <div>
+        <h2>Delete User</h2>
+        <button id="delete"> Delete </button>
+    </div>
+
+
+    <script src="main.js"></script>
+
+</body>
+</html>

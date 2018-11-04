@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My APP</title>
+</head>
+<body>
+
+<form action="/product" method="POST">
+    <input type="text" placeholder="productname" name="pname">
+    <input type="text" placeholder="pid" name="pid">
+    <button type="submit">Submit</button>
+</form>
+
+<ul>
+    <% for(let i=0; i<product.length; i++) {%>
+    <li><%console.log(product[i].pname)%>
+        <span><%= product[i].pname %></span>
+        <span><%= product[i].pid %></span>
+    </li>
+    <% } %>
+</ul>
+
+<div>
+    <h2>Replace Product name</h2>
+    <button id="update"> New Product name</button>
+</div>
+
+<div>
+    <h2>Delete Product</h2>
+    <button id="delete"> Delete </button>
+</div>
+
+
+<script src="main.js"></script>
+
+</body>
+</html>
